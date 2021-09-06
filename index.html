@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+    <div class = "container">
+        <h1>Password Generator</h1>
+        <div class = "password-container">
+            <input type="text" id="password" name="password" readonly = "readonly">
+            <button class="btn-copy" id="copy">Copy</button>
+        </div><br>
+
+        <div class = "password-settings">
+            <label>Password Length (6-32):</label>
+            <input type = "number" id = "length" min = '6' max = '32' value = '6'><br><br>
+            <label>Include Lowercase Characters</label>
+            <input type="checkbox" id = "lowercase" checked><br><br>
+            <label>Include Uppercase Characters</label>
+            <input type="checkbox" id = "uppercase" checked><br><br>
+            <label>Include Symbols (eg. @#$%)</label>
+            <input type="checkbox" id = "symbols"><br><br>
+            <label>Include Ambiguous Symbols ({ } [ ] ( ) / \ ' " ` ~ , ; : . <>)</label>
+            <input type="checkbox" id = "ambiguousSymbols"><br><br>
+            <label>Include Numbers</label>
+            <input type="checkbox" id = "numbers" checked>
+        </div><br>
+        
+        <button class = "btn-generate" id = "generate">Generate Password</button>
+    </div>
+<body>
+    <script src="app.js"></script>
+</body>
+</html>
